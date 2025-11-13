@@ -40,8 +40,8 @@ def normalize_model(m: Dict[str, Any]) -> Tuple[Dict[str, Any], List[str], Dict[
     # -------- META TABLE --------
     # META: config ="", card_data=""
     meta_row ={
-        "model_id" : model_id,
-        "config" : m.get("config"),
+            "model_id" : model_id,
+            "config" : m.get("config"),
         "card_data" : m.get("cardData") #only full=true
     }
 

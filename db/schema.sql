@@ -23,7 +23,8 @@ CREATE TABLE model_snapshots (
     model_id TEXT REFERENCES models(model_id) ON DELETE CASCADE,
     downloads INT DEFAULT 0,
     likes INT DEFAULT 0,
-    snapshot_date DATE DEFAULT CURRENT_DATE
+    snapshot_date DATE DEFAULT CURRENT_DATE,
+    CONSTRAINT unique_snapshot_per_day UNIQUE (model_id, snapshot_date)
 );
 
 CREATE TABLE model_meta (
