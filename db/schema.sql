@@ -11,7 +11,7 @@ last_modified TIMESTAMPTZ,
 private BOOLEAN,
 created_at TIMESTAMP DEFAULT NOW()
 );
-
+    
 CREATE TABLE model_tags (
     model_id TEXT REFERENCES models(model_id) ON DELETE CASCADE,
     tag TEXT,
