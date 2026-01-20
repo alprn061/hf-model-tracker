@@ -1,0 +1,25 @@
+# --- Core & Data Processing ---
+requests            # API requests
+pandas              # Data manipulation & analysis
+pyarrow             # High-performance Parquet IO
+python-dotenv       # Environment variable management
+loguru              # Modern logging
+
+# --- Machine Learning & Analytics ---
+scikit-learn        # Random Forest & ML models
+matplotlib          # Data visualization
+seaborn             # Statistical plotting
+
+# --- Backend & API ---
+fastapi             # High-performance web framework
+pydantic            # Data validation & settings management
+uvicorn[standard]   # ASGI server
+slowapi             # API Rate limiting
+httpx               # Async HTTP client
+
+# --- Database (ORM) ---
+SQLAlchemy>=2.0     # Modern ORM
+psycopg2-binary     # PostgreSQL adapter
+
+# --- Testing & Quality Assurance ---
+pytest              # Unit & Integration testing
