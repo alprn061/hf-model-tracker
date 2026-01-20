@@ -6,9 +6,10 @@ python-dotenv       # Environment variable management
 loguru              # Modern logging
 
 # --- Machine Learning & Analytics ---
-scikit-learn        # Random Forest & ML models
+scikit-learn        # ML models
 matplotlib          # Data visualization
 seaborn             # Statistical plotting
+xgboost             # Machine Learning (Gradient Boosting)
 
 # --- Backend & API ---
 fastapi             # High-performance web framework

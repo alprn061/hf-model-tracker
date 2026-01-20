@@ -7,6 +7,15 @@
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org)
 [![XGBoost](https://img.shields.io/badge/XGBoost-3.1.3-EB4223?style=for-the-badge&logo=xgboost&logoColor=white)](https://xgboost.readthedocs.io/)
 
+<div align="center">
+  <a href="https://hf-model-tracker-web.vercel.app/">
+    <img src="https://img.shields.io/badge/🟢_Live_Demo-Visit_App-success?style=for-the-badge&logo=vercel" alt="Live Demo" />
+  </a>
+  <a href="https://www.linkedin.com/in/aydinalperen-/">
+    <img src="https://img.shields.io/badge/🤝_Contact-Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn" />
+  </a>
+</div>
+
 **An end-to-end AI analytics platform designed to detect "Rising Stars" in the Hugging Face model ecosystem before they go viral.**
 
 ---
