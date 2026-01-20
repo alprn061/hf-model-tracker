@@ -17,17 +17,8 @@ Most trackers only show you what *happened* yesterday. **AI Prediction** tells y
 I engineered a custom **Machine Learning Pipeline** that analyzes the daily momentum (velocity of downloads/likes) of thousands of models. By feeding this data into a **XGBoost Classifier**, the system assigns a **"Trend Probability Score"** to each model and displays them in a live ticker.
 
 ![AI Picks Demo](assets/hf-ai_picks.gif)
-*Live "AI Picks" ticker showing models with >80% probability of trending.*
+*Live "AI Picks" ticker showing models with >45% probability of trending.*
 
----
-
-## 🔒 Project Status: Closed Source (Showcase)
-> **Note:** This repository serves as a portfolio showcase. Due to the proprietary nature of the **Prediction Engine algorithms** and commercial potential, the full source code is not public. 
-> 
-> This repo contains:
-> * High-level architecture documentation.
-> * Sample ETL pipeline scripts (`/core_samples`).
-> * System demos and feature breakdown.
 
 ---
 
@@ -86,3 +77,13 @@ I designed this project with a focus on **Automation (MLOps)** and **Scalability
 | **Backend API** | FastAPI | Async endpoints, Swagger UI, Pydantic |
 | **Database** | PostgreSQL | Hosted on Supabase, optimized with indexing |
 | **DevOps** | GitHub Actions | Automated CI/CD Pipeline |
+
+---
+
+## 🔒 Project Status: Closed Source (Showcase)
+> **Note:** This repository serves as a portfolio showcase. Due to the proprietary nature of the **Prediction Engine algorithms** and commercial potential, the full source code is not public. 
+> 
+> This repo contains:
+> * High-level architecture documentation.
+> * Sample ETL pipeline scripts (`/core_samples`).
+> * System demos and feature breakdown.
