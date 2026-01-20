@@ -2,10 +2,10 @@
 
 ![Project Banner](assets/project-header.png)
 
-[![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.109-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![Python](https://img.shields.io/badge/Python-3.13.5-blue?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.0.128-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org)
-[![XGBoost](https://img.shields.io/badge/XGBoost-1.7-EB4223?style=for-the-badge&logo=xgboost&logoColor=white)](https://xgboost.readthedocs.io/)
+[![XGBoost](https://img.shields.io/badge/XGBoost-3.1.3-EB4223?style=for-the-badge&logo=xgboost&logoColor=white)](https://xgboost.readthedocs.io/)
 
 **An end-to-end AI analytics platform designed to detect "Rising Stars" in the Hugging Face model ecosystem before they go viral.**
 
@@ -56,12 +56,12 @@ The model relies heavily on "Velocity" rather than absolute numbers:
 ## 🚀 Key Features & Capabilities
 
 ### 1. High-Performance Search & Filtering
-The system ingests data from thousands of models daily. I built a responsive search interface that allows users to filter models by **Task** (e.g., Text Generation), **Library** (PyTorch/Safetensors), and **Volume** instantly.
+The system ingests data from thousands of models daily. I built a responsive search interface that allows users to filter models by **Task** (e.g., Text Generation),  **Volume**, and **Likes** instantly.
 
 ![Search Demo](assets/hf-search.gif)
 
 ### 2. Deep Dive Analytics & Visualization
-Clicking on any model opens a detailed analytics modal. This view visualizes the model's growth trajectory, compares its "Hype Score" against the market average, and displays the **AI-predicted probability** of the model trending tomorrow.
+Clicking on any model opens a detailed analytics modal. This view visualizes the model's Hype Score, Downloads(30 days), Total Likes, Growth and Task.
 
 ![Modal Demo](assets/hf-modal.gif)
 
@@ -72,7 +72,7 @@ Clicking on any model opens a detailed analytics modal. This view visualizes the
 I designed this project with a focus on **Automation (MLOps)** and **Scalability**.
 
 ### The Pipeline Workflow
-1.  **Ingestion (ETL):** A Python script fetches metadata for ~50,000 models from Hugging Face API daily (Sanitized sample available in `core_samples/fetch_hf_models.py`).
+1.  **Ingestion (ETL):** A Python script fetches models from Hugging Face API daily (Sanitized sample available in `core_samples/fetch_hf_models.py`).
 2.  **Preprocessing:** Data is cleaned, and "velocity" features (e.g., `delta_downloads_24h`, `growth_rate_7d`) are calculated using Pandas.
 3.  **Inference:** The pre-trained **XGBoost** model predicts the `is_trending` probability for each model based on the latest data.
 4.  **Storage:** Results are bulk-inserted into a **Supabase (PostgreSQL)** database using optimized SQLAlchemy queries.
@@ -82,20 +82,7 @@ I designed this project with a focus on **Automation (MLOps)** and **Scalability
 
 | Component | Technology | Description |
 | :--- | :--- | :--- |
-| **Core Logic** | Python 3.11 | Pandas, XGBoost, Scikit-learn |
+| **Core Logic** | Python 3.13.5 | Pandas, XGBoost, Scikit-learn |
 | **Backend API** | FastAPI | Async endpoints, Swagger UI, Pydantic |
 | **Database** | PostgreSQL | Hosted on Supabase, optimized with indexing |
 | **DevOps** | GitHub Actions | Automated CI/CD Pipeline |
-
----
-
-## 📂 Repository Structure
-
-Although the core logic is private, I have shared the architectural skeleton and ETL samples:
-
-```text
-├── assets/              # System demos (GIFs) and architecture diagrams
-├── core_samples/        # Sanitized ETL & Data Ingestion scripts (Demo)
-├── schemas/             # Pydantic data models used in API
-├── requirements.txt     # Production dependencies
-└── README.md            # Documentation
